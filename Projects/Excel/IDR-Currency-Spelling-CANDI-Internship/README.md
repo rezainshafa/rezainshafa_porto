@@ -1,10 +1,14 @@
 # Modul VBA Excel: Konversi Jumlah IDR ke Teks (Terbilang) – Proyek Magang CANDI TOUR N TRAVEL
+- ID: Modul VBA untuk konversi mata uang IDR ke teks (Indonesia/Inggris) untuk invoice keuangan travel. Dikembangkan selama magang, otomatisasi dokumen di Excel.
+- EN: VBA module for converting IDR currency to words (Indonesian/English) for travel financial invoices. Developed during internship, automating Excel documents.
 
 ## ID (Bahasa Indonesia)
 Selama magang di **CANDI TOUR N TRAVEL** (periode: Juni - Agustus 2025), saya mengembangkan modul VBA untuk Microsoft Excel yang mengonversi nilai mata uang Rupiah (IDR) dari format numerik/string menjadi representasi kata-kata (terbilang) dalam bahasa Indonesia dan Inggris. Proyek ini digunakan untuk otomatisasi dokumen keuangan seperti invoice paket tour, kwitansi pembayaran, dan laporan biaya travel, memastikan akurasi dan kepatuhan standar formal (misalnya, menghindari pemalsuan jumlah).
 
 Teknologi: **VBA (Visual Basic for Applications)** di Microsoft Excel.  
 Repo ini berisi kode sumber dan contoh penggunaan.
+
+![Screenshot](InvoiceScreenshot.png)
 
 ### Fitur Utama
 - **Parsing IDR Fleksibel**: Fungsi `ParseIDR` menormalkan input seperti "Rp 1.234.567,89", "IDR1,234.56", atau dari PDF (menangani titik ribuan, koma desimal, spasi).
@@ -15,7 +19,7 @@ Repo ini berisi kode sumber dan contoh penggunaan.
 
 ### Cara Menggunakan
 1. Buka Excel > Alt + F11 (VBA Editor) > Insert > Module.
-2. Paste kode dari `IDR_Terbilang_Module.bas`.
+2. Paste kode dari `CurrencySpellingModule.bas`.
 3. Di sheet Excel, gunakan formula:
    - `=TerbilangIDR(A1)` untuk sel A1 berisi 1234567.89.
    - `=AmountInWordsIDR_EN("Rp 1.234,56")`.
